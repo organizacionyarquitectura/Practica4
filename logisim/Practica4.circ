@@ -92,22 +92,7 @@
     <wire from="(220,220)" to="(350,220)"/>
     <wire from="(510,200)" to="(580,200)"/>
     <wire from="(220,160)" to="(220,220)"/>
-    <comp lib="1" loc="(510,200)" name="OR Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(400,160)" name="AND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(580,200)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="P XOR Q"/>
-      <a name="labelloc" val="east"/>
-    </comp>
     <comp lib="1" loc="(290,160)" name="NOT Gate"/>
-    <comp lib="1" loc="(400,240)" name="AND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
     <comp lib="0" loc="(200,160)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="P"/>
@@ -115,7 +100,22 @@
     <comp lib="6" loc="(325,97)" name="Text">
       <a name="text" val="Compuerta XOR"/>
     </comp>
+    <comp lib="1" loc="(400,240)" name="AND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(510,200)" name="OR Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(400,160)" name="AND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
     <comp lib="1" loc="(290,230)" name="NOT Gate"/>
+    <comp lib="0" loc="(580,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="P XOR Q"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="0" loc="(200,230)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="Q"/>
@@ -188,21 +188,67 @@
     <wire from="(160,110)" to="(160,290)"/>
     <wire from="(150,250)" to="(220,250)"/>
     <wire from="(390,80)" to="(390,140)"/>
-    <comp lib="6" loc="(547,114)" name="Text">
-      <a name="text" val="10-SUMA"/>
+    <comp lib="6" loc="(264,61)" name="Text">
+      <a name="text" val="ALU de 1 bit suma"/>
     </comp>
-    <comp lib="2" loc="(410,160)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="2"/>
-    </comp>
-    <comp lib="1" loc="(300,190)" name="OR Gate">
+    <comp lib="1" loc="(280,340)" name="AND Gate">
+      <a name="facing" val="south"/>
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
     <comp lib="6" loc="(540,96)" name="Text">
       <a name="text" val="01-OR"/>
     </comp>
+    <comp lib="2" loc="(410,160)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="2"/>
+    </comp>
+    <comp loc="(250,240)" name="XOR"/>
+    <comp lib="0" loc="(440,160)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="A Op B"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp loc="(320,270)" name="XOR"/>
+    <comp lib="0" loc="(140,110)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="6" loc="(547,114)" name="Text">
+      <a name="text" val="10-SUMA"/>
+    </comp>
+    <comp lib="1" loc="(300,120)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(140,170)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="1" loc="(220,340)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(546,79)" name="Text">
+      <a name="text" val="00- AND"/>
+    </comp>
+    <comp lib="1" loc="(300,190)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(390,80)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Op"/>
+    </comp>
+    <comp lib="0" loc="(170,70)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Ci"/>
+    </comp>
     <comp lib="0" loc="(250,420)" name="Pin">
       <a name="facing" val="north"/>
       <a name="output" val="true"/>
@@ -214,54 +260,8 @@
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(280,340)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(300,120)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp loc="(250,240)" name="XOR"/>
     <comp lib="6" loc="(544,58)" name="Text">
       <a name="text" val="Operaciones"/>
-    </comp>
-    <comp lib="0" loc="(140,110)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="A"/>
-    </comp>
-    <comp lib="1" loc="(220,340)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(140,170)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="B"/>
-    </comp>
-    <comp lib="0" loc="(170,70)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Ci"/>
-    </comp>
-    <comp lib="6" loc="(264,61)" name="Text">
-      <a name="text" val="ALU de 1 bit suma"/>
-    </comp>
-    <comp lib="0" loc="(440,160)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="A Op B"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="6" loc="(546,79)" name="Text">
-      <a name="text" val="00- AND"/>
-    </comp>
-    <comp lib="0" loc="(390,80)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="width" val="2"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Op"/>
     </comp>
   </circuit>
   <circuit name="ALU 8 bits suma">
@@ -369,38 +369,12 @@
     <wire from="(240,240)" to="(240,490)"/>
     <wire from="(120,180)" to="(190,180)"/>
     <wire from="(300,220)" to="(300,470)"/>
-    <comp lib="0" loc="(90,550)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="B"/>
-    </comp>
+    <comp loc="(390,420)" name="ALU 1 bit suma"/>
     <comp loc="(390,530)" name="ALU 1 bit suma"/>
+    <comp lib="6" loc="(492,32)" name="Text">
+      <a name="text" val="Operaciones"/>
+    </comp>
     <comp loc="(390,360)" name="ALU 1 bit suma"/>
-    <comp lib="0" loc="(370,560)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Acarramiento"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="6" loc="(495,88)" name="Text">
-      <a name="text" val="10-SUMA"/>
-    </comp>
-    <comp lib="0" loc="(580,270)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="label" val="A op B"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp loc="(390,120)" name="ALU 1 bit suma"/>
-    <comp lib="6" loc="(488,70)" name="Text">
-      <a name="text" val="01-OR"/>
-    </comp>
-    <comp lib="0" loc="(100,200)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
     <comp lib="6" loc="(494,53)" name="Text">
       <a name="text" val="00- AND"/>
     </comp>
@@ -414,20 +388,50 @@
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
+    <comp lib="6" loc="(495,88)" name="Text">
+      <a name="text" val="10-SUMA"/>
+    </comp>
     <comp lib="0" loc="(580,270)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp loc="(390,470)" name="ALU 1 bit suma"/>
-    <comp loc="(390,290)" name="ALU 1 bit suma"/>
+    <comp lib="0" loc="(90,550)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp loc="(390,230)" name="ALU 1 bit suma"/>
     <comp lib="0" loc="(100,200)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
       <a name="label" val="A"/>
     </comp>
+    <comp loc="(390,290)" name="ALU 1 bit suma"/>
     <comp lib="6" loc="(268,71)" name="Text">
       <a name="text" val="ALU de 8 bits suma"/>
+    </comp>
+    <comp lib="0" loc="(580,270)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="A op B"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp loc="(390,180)" name="ALU 1 bit suma"/>
+    <comp lib="6" loc="(488,70)" name="Text">
+      <a name="text" val="01-OR"/>
+    </comp>
+    <comp lib="0" loc="(100,200)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(370,560)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Acarramiento"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(420,90)" name="Pin">
       <a name="facing" val="south"/>
@@ -435,12 +439,8 @@
       <a name="tristate" val="false"/>
       <a name="label" val="Op"/>
     </comp>
-    <comp loc="(390,420)" name="ALU 1 bit suma"/>
-    <comp loc="(390,180)" name="ALU 1 bit suma"/>
-    <comp loc="(390,230)" name="ALU 1 bit suma"/>
-    <comp lib="6" loc="(492,32)" name="Text">
-      <a name="text" val="Operaciones"/>
-    </comp>
+    <comp loc="(390,120)" name="ALU 1 bit suma"/>
+    <comp loc="(390,470)" name="ALU 1 bit suma"/>
   </circuit>
   <circuit name="ALU 1 bit resta">
     <a name="circuit" val="ALU 1 bit resta"/>
@@ -514,50 +514,11 @@
     <wire from="(190,220)" to="(200,220)"/>
     <wire from="(520,330)" to="(530,330)"/>
     <wire from="(230,160)" to="(230,220)"/>
-    <comp lib="0" loc="(60,190)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="B"/>
-    </comp>
-    <comp lib="6" loc="(356,46)" name="Text">
-      <a name="text" val="ALU de 1 bit de suma y resta"/>
-    </comp>
-    <comp lib="0" loc="(530,330)" name="Pin">
+    <comp lib="0" loc="(370,150)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="label" val="Overflow"/>
+      <a name="label" val="A op B"/>
       <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(170,60)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Operacion"/>
-    </comp>
-    <comp lib="6" loc="(527,111)" name="Text">
-      <a name="text" val="1-RESTA"/>
-    </comp>
-    <comp loc="(190,220)" name="XOR"/>
-    <comp lib="1" loc="(200,290)" name="NOT Gate">
-      <a name="facing" val="south"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp loc="(280,150)" name="ALU 1 bit suma"/>
-    <comp lib="0" loc="(60,120)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="A"/>
-    </comp>
-    <comp lib="1" loc="(340,340)" name="NOT Gate">
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="1" loc="(520,330)" name="OR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="6" loc="(525,73)" name="Text">
-      <a name="text" val="Operaciones"/>
-    </comp>
-    <comp lib="1" loc="(220,290)" name="NOT Gate">
-      <a name="facing" val="south"/>
-      <a name="size" val="20"/>
     </comp>
     <comp lib="0" loc="(370,200)" name="Pin">
       <a name="facing" val="west"/>
@@ -565,28 +526,67 @@
       <a name="label" val="Acarreo"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(270,100)" name="Constant">
-      <a name="facing" val="south"/>
-      <a name="width" val="2"/>
-      <a name="value" val="0x2"/>
-    </comp>
+    <comp loc="(280,150)" name="ALU 1 bit suma"/>
     <comp lib="6" loc="(525,91)" name="Text">
       <a name="text" val="0-SUMA"/>
     </comp>
-    <comp lib="0" loc="(370,150)" name="Pin">
+    <comp lib="0" loc="(530,330)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="label" val="A op B"/>
+      <a name="label" val="Overflow"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(410,290)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="3"/>
+    <comp lib="1" loc="(340,340)" name="NOT Gate">
+      <a name="size" val="20"/>
     </comp>
     <comp lib="1" loc="(410,370)" name="AND Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="3"/>
     </comp>
+    <comp lib="0" loc="(60,120)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="1" loc="(520,330)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(270,100)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="2"/>
+      <a name="value" val="0x2"/>
+    </comp>
+    <comp lib="6" loc="(527,111)" name="Text">
+      <a name="text" val="1-RESTA"/>
+    </comp>
+    <comp lib="1" loc="(200,290)" name="NOT Gate">
+      <a name="facing" val="south"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="6" loc="(356,46)" name="Text">
+      <a name="text" val="ALU de 1 bit de suma y resta"/>
+    </comp>
+    <comp lib="1" loc="(220,290)" name="NOT Gate">
+      <a name="facing" val="south"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="6" loc="(525,73)" name="Text">
+      <a name="text" val="Operaciones"/>
+    </comp>
+    <comp lib="0" loc="(60,190)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="1" loc="(410,290)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="0" loc="(170,60)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Operacion"/>
+    </comp>
+    <comp loc="(190,220)" name="XOR"/>
   </circuit>
   <circuit name="ALU 8 bits igualdad">
     <a name="circuit" val="ALU 8 bits igualdad"/>
@@ -711,26 +711,40 @@
     <wire from="(330,120)" to="(330,180)"/>
     <wire from="(350,340)" to="(550,340)"/>
     <wire from="(350,620)" to="(550,620)"/>
-    <comp lib="0" loc="(180,220)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp loc="(350,610)" name="ALU 1 bit resta"/>
-    <comp lib="0" loc="(840,650)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp loc="(350,330)" name="ALU 1 bit resta"/>
     <comp lib="0" loc="(810,310)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
+    <comp lib="0" loc="(840,690)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp loc="(350,540)" name="ALU 1 bit resta"/>
+    <comp lib="6" loc="(617,80)" name="Text">
+      <a name="text" val="Cualquier otra cosa- Son diferentes"/>
+    </comp>
+    <comp loc="(350,400)" name="ALU 1 bit resta"/>
+    <comp loc="(350,610)" name="ALU 1 bit resta"/>
+    <comp lib="6" loc="(572,42)" name="Text">
+      <a name="text" val="Significados"/>
+    </comp>
+    <comp lib="0" loc="(180,220)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp loc="(350,470)" name="ALU 1 bit resta"/>
+    <comp loc="(350,330)" name="ALU 1 bit resta"/>
+    <comp lib="0" loc="(150,560)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="6" loc="(350,36)" name="Text">
+      <a name="text" val="ALU de 8 bits igualdad"/>
+    </comp>
     <comp lib="0" loc="(300,80)" name="Constant"/>
-    <comp lib="0" loc="(150,560)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="B"/>
+    <comp lib="6" loc="(575,63)" name="Text">
+      <a name="text" val="00000000-Son iguales"/>
     </comp>
     <comp lib="0" loc="(820,300)" name="Pin">
       <a name="facing" val="west"/>
@@ -739,37 +753,23 @@
       <a name="label" val="A op B"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp loc="(350,130)" name="ALU 1 bit resta"/>
-    <comp lib="0" loc="(150,560)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
+    <comp lib="0" loc="(840,650)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
     </comp>
-    <comp loc="(350,190)" name="ALU 1 bit resta"/>
-    <comp lib="6" loc="(617,80)" name="Text">
-      <a name="text" val="Cualquier otra cosa- Son diferentes"/>
-    </comp>
-    <comp loc="(350,540)" name="ALU 1 bit resta"/>
     <comp loc="(350,260)" name="ALU 1 bit resta"/>
+    <comp lib="0" loc="(150,560)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp loc="(350,130)" name="ALU 1 bit resta"/>
+    <comp loc="(350,190)" name="ALU 1 bit resta"/>
     <comp lib="0" loc="(180,230)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
       <a name="label" val="A"/>
     </comp>
-    <comp lib="6" loc="(350,36)" name="Text">
-      <a name="text" val="ALU de 8 bits igualdad"/>
-    </comp>
-    <comp lib="0" loc="(840,690)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="6" loc="(572,42)" name="Text">
-      <a name="text" val="Significados"/>
-    </comp>
-    <comp loc="(350,470)" name="ALU 1 bit resta"/>
-    <comp lib="6" loc="(575,63)" name="Text">
-      <a name="text" val="00000000-Son iguales"/>
-    </comp>
-    <comp loc="(350,400)" name="ALU 1 bit resta"/>
   </circuit>
   <circuit name="ALU 1 bit NOR">
     <a name="circuit" val="ALU 1 bit NOR"/>
@@ -784,21 +784,21 @@
     <wire from="(230,170)" to="(230,180)"/>
     <wire from="(290,150)" to="(330,150)"/>
     <wire from="(360,150)" to="(430,150)"/>
+    <comp lib="6" loc="(326,87)" name="Text">
+      <a name="text" val="ALU de 1 bit NOR"/>
+    </comp>
     <comp lib="1" loc="(360,150)" name="NOT Gate"/>
-    <comp lib="1" loc="(290,150)" name="AND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(160,120)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="A"/>
-    </comp>
     <comp lib="0" loc="(430,150)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="A NOR B"/>
     </comp>
-    <comp lib="6" loc="(326,87)" name="Text">
-      <a name="text" val="ALU de 1 bit NOR"/>
+    <comp lib="1" loc="(290,150)" name="OR Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(160,120)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
     </comp>
     <comp lib="0" loc="(160,180)" name="Pin">
       <a name="tristate" val="false"/>
@@ -923,32 +923,8 @@
       <a name="tristate" val="false"/>
       <a name="label" val="A"/>
     </comp>
-    <comp lib="0" loc="(140,550)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="B"/>
-    </comp>
-    <comp loc="(440,530)" name="ALU 1 bit suma"/>
-    <comp loc="(440,470)" name="ALU 1 bit suma"/>
-    <comp lib="0" loc="(470,90)" name="Constant">
-      <a name="width" val="2"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp loc="(440,230)" name="ALU 1 bit suma"/>
-    <comp lib="0" loc="(140,550)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(630,270)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="label" val="A op B"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="6" loc="(544,53)" name="Text">
-      <a name="text" val="00- AND"/>
-    </comp>
+    <comp lib="1" loc="(540,470)" name="NOT Gate"/>
+    <comp lib="1" loc="(560,120)" name="NOT Gate"/>
     <comp lib="0" loc="(420,560)" name="Pin">
       <a name="facing" val="north"/>
       <a name="output" val="true"/>
@@ -956,43 +932,52 @@
       <a name="label" val="Acarramiento"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(540,420)" name="NOT Gate"/>
-    <comp lib="0" loc="(150,200)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp loc="(440,180)" name="ALU 1 bit suma"/>
-    <comp lib="6" loc="(545,88)" name="Text">
-      <a name="text" val="10-SUMA"/>
-    </comp>
-    <comp lib="6" loc="(538,70)" name="Text">
-      <a name="text" val="01-OR"/>
-    </comp>
-    <comp loc="(440,420)" name="ALU 1 bit suma"/>
-    <comp lib="1" loc="(540,470)" name="NOT Gate"/>
-    <comp lib="0" loc="(420,90)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="1" loc="(540,290)" name="NOT Gate"/>
-    <comp lib="6" loc="(318,71)" name="Text">
-      <a name="text" val="ALU de 8 bits suma"/>
-    </comp>
-    <comp lib="1" loc="(540,230)" name="NOT Gate"/>
-    <comp lib="1" loc="(540,170)" name="NOT Gate"/>
-    <comp loc="(440,120)" name="ALU 1 bit suma"/>
     <comp lib="1" loc="(540,360)" name="NOT Gate"/>
+    <comp lib="0" loc="(140,550)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="1" loc="(540,530)" name="NOT Gate"/>
+    <comp lib="1" loc="(540,170)" name="NOT Gate"/>
+    <comp loc="(440,290)" name="ALU 1 bit suma"/>
+    <comp lib="0" loc="(470,90)" name="Constant">
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(420,90)" name="Constant"/>
+    <comp lib="1" loc="(540,290)" name="NOT Gate"/>
+    <comp lib="1" loc="(540,230)" name="NOT Gate"/>
+    <comp lib="0" loc="(630,270)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="A op B"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp loc="(440,470)" name="ALU 1 bit suma"/>
+    <comp loc="(440,120)" name="ALU 1 bit suma"/>
+    <comp loc="(440,230)" name="ALU 1 bit suma"/>
+    <comp lib="1" loc="(540,420)" name="NOT Gate"/>
+    <comp loc="(440,420)" name="ALU 1 bit suma"/>
     <comp lib="0" loc="(630,270)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="6" loc="(542,32)" name="Text">
-      <a name="text" val="Operaciones"/>
+    <comp lib="0" loc="(150,200)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
     </comp>
-    <comp lib="1" loc="(560,120)" name="NOT Gate"/>
-    <comp lib="1" loc="(540,530)" name="NOT Gate"/>
+    <comp loc="(440,180)" name="ALU 1 bit suma"/>
     <comp loc="(440,360)" name="ALU 1 bit suma"/>
-    <comp loc="(440,290)" name="ALU 1 bit suma"/>
+    <comp loc="(440,530)" name="ALU 1 bit suma"/>
+    <comp lib="0" loc="(140,550)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="6" loc="(317,71)" name="Text">
+      <a name="text" val="ALU de 8 bits NOR"/>
+    </comp>
   </circuit>
   <circuit name="ALU 8 bits todo integrado">
     <a name="circuit" val="ALU 8 bits todo integrado"/>
